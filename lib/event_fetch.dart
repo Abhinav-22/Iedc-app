@@ -120,7 +120,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
             db.collection("events").snapshots().listen((event) {
               for (var doc in event.docs) {
-                names.add(doc.data()["Name"]);
+                names.add(doc.data()["event_name"]);
               }
               print("bookname : ${names.join(",")}");
             });
